@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: PhD candidate @ <a href="https://icai-stroke-lab.webflow.io/">ICAI Stroke Lab</a>
+nav: false
 
 profile:
   align: left
@@ -15,8 +16,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-Test biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I work on applications of AI and computer vision methods in stroke imaging. My main focus is on Digital Subtraction Angiography (DSA), but I also work with other imaging modalities. The goal of my project is to develop tools that can be used to inform decision-making during mechanical thrombectomy.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Within the [ICAI Stroke Lab](https://icai-stroke-lab.webflow.io/) I collaborate closely with my colleagues working on the application of AI methods in the different stages of the (Dutch) stroke care pathway. In addition to the Stroke Lab, I am also a member of the [Biomedical Imaging Group Rotterdam](https://bigr.nl/), in the Erasmus MC. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm supervised by [dr. Theo van Walsum](https://www.erasmusmc.nl/en/research/researchers/walsum-theo-van), [prof. dr. Danny Ruijters](https://www.tue.nl/en/research/researchers/danny-ruijters) and [dr. Sandra Cornelissen](https://www.erasmusmc.nl/nl-nl/patientenzorg/zorgverleners/cornelissen-sap). 
+
+If you are a MSc student looking for a project (either an internship or a full thesis) don't hesitate to contact me. I keep a list of [student projects](https://docs.google.com/document/d/1a1WFqMKpYxeaOnBHQ0GBcRQFTNVdd6nwqldRgCEPuBo/edit?usp=sharing) but this is by no means exhaustive, so feel free to contact me if you have an idea.

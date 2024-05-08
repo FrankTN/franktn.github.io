@@ -46,6 +46,8 @@ rss_icon: false
 # Layout
 # -----------------------------------------------------------------------------
 
+blog_nav_title:
+
 navbar_fixed: true
 footer_fixed: true
 
