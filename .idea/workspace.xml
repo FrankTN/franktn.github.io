@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a696935-f407-4f3c-863b-15688a3a66c2" name="Changes" comment="" />
+    <list default="true" id="4a696935-f407-4f3c-863b-15688a3a66c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/entry_point.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/entry_point.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/al-folio" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +67,7 @@
       <updated>1708087482974</updated>
       <workItem from="1708087484046" duration="9603000" />
       <workItem from="1708438510600" duration="20000" />
-      <workItem from="1715167908665" duration="643000" />
+      <workItem from="1715167908665" duration="1685000" />
     </task>
     <servers />
   </component>
