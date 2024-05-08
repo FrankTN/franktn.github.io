@@ -7,6 +7,20 @@
     <list default="true" id="4a696935-f407-4f3c-863b-15688a3a66c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/_pages/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/prof_pic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/prof_pic.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ftenijenhuis/Documents/franktn.github.io/_bibliography",
+    "last_opened_file_path": "/home/ftenijenhuis/Documents/franktn.github.io/assets/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$/_bibliography" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -66,7 +81,7 @@
       <updated>1708087482974</updated>
       <workItem from="1708087484046" duration="9603000" />
       <workItem from="1708438510600" duration="20000" />
-      <workItem from="1715167908665" duration="4193000" />
+      <workItem from="1715167908665" duration="6591000" />
     </task>
     <servers />
   </component>
