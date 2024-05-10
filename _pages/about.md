@@ -22,4 +22,4 @@ Within the [ICAI Stroke Lab](https://icai-stroke-lab.webflow.io/) I collaborate 
 
 I'm supervised by [dr. Theo van Walsum](https://www.erasmusmc.nl/en/research/researchers/walsum-theo-van), [prof. dr. Danny Ruijters](https://www.tue.nl/en/research/researchers/danny-ruijters) and [dr. Sandra Cornelissen](https://www.erasmusmc.nl/nl-nl/patientenzorg/zorgverleners/cornelissen-sap). 
 
-If you are a MSc student looking for a project (either an internship or a full thesis) don't hesitate to contact me. I keep a list of [student projects](https://docs.google.com/document/d/1a1WFqMKpYxeaOnBHQ0GBcRQFTNVdd6nwqldRgCEPuBo/edit?usp=sharing) but this is by no means exhaustive, so feel free to contact me if you have an idea.
+If you are a MSc student looking for a project (either an internship or a full thesis) don't hesitate to contact me. I keep a list of [student projects](https://docs.google.com/document/d/1gykn1EZdXKo-v8AbpkX_6F0wMpT3G5v8TGad03x_QR4/edit?usp=sharing) but this is by no means exhaustive, so feel free to contact me if you have an idea.
