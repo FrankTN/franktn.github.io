@@ -31,12 +31,16 @@
         initializeProgressElement();
         $(document).on('scroll', function () {
           progressBar.attr({ value: getCurrentScrollPosition() });
+          updateProgressBarPosition(); // Update position on scroll
         });
         $(window).on('resize', initializeProgressElement);
       } else {
         resizeProgressBar();
-        $(document).on('scroll', resizeProgressBar);
-        $(window).on('resize', resizeProgressBar);
+        $(document).on('scroll', function() {
+          resizeProgressBar();
+          updateProgressBarPosition(); // Update position on scroll
+        });
+        $(window).on('resize', initializeProgressElement);
       }
     }
     /*
@@ -50,13 +54,45 @@
 
     function initializeProgressElement() {
       let navbarHeight = $('#navbar').outerHeight(true);
-      $('body').css({ 'padding-top': navbarHeight });
+      let bannerHeight = $('#banner').outerHeight(true) || 0;
+      // Don't add padding-top to body when we have a banner, as it would push the banner down
+      // The navbar is already positioned below the banner via CSS
+      if (bannerHeight === 0) {
+        $('body').css({ 'padding-top': navbarHeight });
+      }
       $('progress-container').css({ 'padding-top': navbarHeight });
-      progressBar.css({ top: navbarHeight });
+      // Update progress bar position based on scroll
+      updateProgressBarPosition();
       progressBar.attr({
         max: getDistanceToScroll(),
         value: getCurrentScrollPosition(),
       });
+    }
+    
+    function updateProgressBarPosition() {
+      let navbarHeight = $('#navbar').outerHeight(true);
+      let bannerHeight = $('#banner').outerHeight(true) || 0;
+      const scrollTop = $(window).scrollTop();
+      
+      if (bannerHeight > 0) {
+        // Calculate progress bar position: moves linearly as we scroll
+        // When scrollTop = 0: progress bar at (bannerHeight + navbarHeight)
+        // When scrollTop = bannerHeight: progress bar at navbarHeight
+        // When scrollTop > bannerHeight: progress bar at navbarHeight
+        let progressBarTop;
+        if (scrollTop >= bannerHeight) {
+          // Banner fully scrolled past, progress bar at navbar height
+          progressBarTop = navbarHeight;
+        } else {
+          // Banner still visible, progress bar moves up linearly
+          // Start at (bannerHeight + navbarHeight), end at navbarHeight
+          progressBarTop = bannerHeight + navbarHeight - scrollTop;
+        }
+        progressBar.css({ top: progressBarTop });
+      } else {
+        // No banner, just position at navbar height
+        progressBar.css({ top: navbarHeight });
+      }
     }
     /*
      * The offset between the html document height and the browser viewport

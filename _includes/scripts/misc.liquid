@@ -32,6 +32,71 @@
   ></script>
 {% endif %}
 
+<!-- Navbar scroll behavior for banner -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    const navbar = $('#navbar');
+    const banner = $('#banner');
+    
+    if (navbar.hasClass('fixed-top') && banner.length > 0) {
+      const bannerHeight = banner.outerHeight(true) || 350;
+      let isScrolled = false;
+      let ticking = false;
+      
+      // Force initial position via inline style to override any CSS
+      const navbarEl = navbar[0];
+      navbarEl.style.setProperty('position', 'fixed', 'important');
+      navbarEl.style.setProperty('top', '350px', 'important');
+      navbarEl.style.setProperty('left', '0', 'important');
+      navbarEl.style.setProperty('right', '0', 'important');
+      
+      function updateNavbarPosition() {
+        const scrollTop = $(window).scrollTop();
+        // Calculate navbar position: moves linearly from bannerHeight to 0px as we scroll
+        // Same logic as progress bar: position = bannerHeight - scrollTop
+        let navbarTop;
+        if (scrollTop >= bannerHeight) {
+          // Banner fully scrolled past, navbar at top (0px)
+          navbarTop = 0;
+          if (!isScrolled) {
+            navbar.addClass('scrolled');
+            isScrolled = true;
+          }
+        } else {
+          // Banner still visible, navbar moves up linearly
+          // When scrollTop = 0: navbarTop = bannerHeight (350px)
+          // When scrollTop = bannerHeight: navbarTop = 0
+          // Same linear formula as progress bar: position = bannerHeight - scrollTop
+          navbarTop = bannerHeight - scrollTop;
+          if (isScrolled) {
+            navbar.removeClass('scrolled');
+            isScrolled = false;
+          }
+        }
+        // Use native DOM setProperty with !important to override any CSS
+        navbar[0].style.setProperty('top', navbarTop + 'px', 'important');
+        ticking = false;
+      }
+      
+      // Initialize: navbar starts below banner
+      navbar.removeClass('scrolled');
+      navbar[0].style.setProperty('top', '350px', 'important');
+      isScrolled = false;
+      
+      // Check on page load
+      updateNavbarPosition();
+      
+      // Update on scroll using requestAnimationFrame to avoid scroll-linked positioning warnings
+      $(window).on('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNavbarPosition);
+          ticking = true;
+        }
+      });
+    }
+  });
+</script>
+
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>
