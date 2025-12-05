@@ -47,7 +47,17 @@
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {% if entry.html %}
+        {% if entry.html contains '://' %}
+          <a href="{{ entry.html }}" target="_blank" rel="noopener noreferrer">{{ entry.title }}</a>
+        {% else %}
+          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}">{{ entry.title }}</a>
+        {% endif %}
+      {% else %}
+        {{ entry.title }}
+      {% endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -59,12 +69,37 @@
 
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
-        {%- assign author_last_name = author.last | remove: '¶' | remove: '&' | remove: '*' | remove: '†' | remove: '^' -%}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
+        {%- assign author_last_name = author.last | remove: '¶' | remove: '&' | remove: '*' | remove: '†' | remove: '^' | strip -%}
+        {%- comment -%} Handle "te Nijenhuis" - check if "te" is in prefix or if it's part of last name {%- endcomment -%}
+        {%- if author.prefix -%}
+          {%- assign full_last_name = author.prefix | strip | append: ' ' | append: author_last_name -%}
+        {%- else -%}
+          {%- assign full_last_name = author_last_name -%}
         {%- endif -%}
+        {%- assign author_first_stripped = author.first | strip -%}
+        {%- comment -%} Check both the full last name (with "te") and just the last name {%- endcomment -%}
+        {%- for last_name_variant in site.scholar.last_name -%}
+          {%- assign last_variant_stripped = last_name_variant | strip -%}
+          {%- if full_last_name == last_variant_stripped or author_last_name == last_variant_stripped or full_last_name contains last_variant_stripped or last_variant_stripped contains full_last_name -%}
+            {%- comment -%} Last name matches, now check first name {%- endcomment -%}
+            {%- for first_name_variant in site.scholar.first_name -%}
+              {%- assign variant_stripped = first_name_variant | strip -%}
+              {%- if author_first_stripped == variant_stripped -%}
+                {%- assign author_is_self = true -%}
+                {%- break -%}
+              {%- elsif author_first_stripped contains variant_stripped -%}
+                {%- assign author_is_self = true -%}
+                {%- break -%}
+              {%- elsif variant_stripped contains author_first_stripped -%}
+                {%- assign author_is_self = true -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- if author_is_self -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -81,19 +116,16 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
-            {{- author.first }}
-            {{ author.last -}}
-          </em>
+          <strong>
+            {{ author.first }}{% if author.prefix %} {{ author.prefix }} {% endif %}{{ author.last }}
+          </strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{coauthor_url}}">
-              {{- author.first }}
-              {{ author.last -}}
+              {{ author.first }}{% if author.prefix %} {{ author.prefix }} {% endif %}{{ author.last }}
             </a>
           {%- else -%}
-            {{- author.first }}
-            {{ author.last -}}
+            {{ author.first }}{% if author.prefix %} {{ author.prefix }} {% endif %}{{ author.last }}
           {% endif %}
         {%- endif -%}
       {% endfor %}
@@ -106,7 +138,13 @@
         {%- endif -%}
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+          {% assign more_authors_show = more_authors_show | append: author.first %}
+          {% if author.prefix %}
+            {% assign more_authors_show = more_authors_show | append: ' ' | append: author.prefix | append: ' ' %}
+          {% else %}
+            {% assign more_authors_show = more_authors_show | append: ' ' %}
+          {% endif %}
+          {% assign more_authors_show = more_authors_show | append: author.last %}
           {% unless forloop.last %}
             {% assign more_authors_show = more_authors_show | append: ', ' %}
           {% endunless %}

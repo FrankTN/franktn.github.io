@@ -1,25 +1,53 @@
 ---
 ---
+% To add preview images/GIFs to publications:
+% 1. Add a 'preview' field to your BibTeX entry (e.g., preview={filename.gif})
+% 2. Place the image/GIF in assets/img/publication_preview/
+% 3. Supported formats: .gif, .jpg, .jpeg, .png
+% 4. The preview will appear as a thumbnail next to the publication
+% 5. You can also use external URLs: preview={https://example.com/image.gif}
 
-@article{te2022outcome,
-  title={Outcome prediction for endovascular therapy: Multimodal deep learning for acute ischemic events in the arteria cerebri media},
-  author={te Nijenhuis, Frank},
-  year={2022}
+
+@inproceedings{claire,
+  author       = "van den Berg*, C. J. and F. G. te Nijenhuis*  and Blaauboer, M. J. and Van Erp, D. T. W. and Keppels, C. M. and Van der Sluijs, M. and Roozenbeek, B. and Van Zwam, W. and Cornelissen, S. and Ruijters, D. and Su, R. and van Walsum, T.",
+  title        = "CLAIRE-DSA: Fluoroscopic Image Classification for Quality Assurance of Computer Vision Pipelines in Acute Ischemic Stroke",
+  booktitle = "Stroke Workshop on Imaging and Treatment CHallenges (SWITCH2025)",
+  maintitle = {28th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  pubstate={forthcoming},
+  year         = 2025,
+  html         = {https://arxiv.org/pdf/2508.12755},
+  preview      = {claire.png},
+  note = {*These authors contributed equally to this work.},
 }
 
-@article{su2025perfdsa,
-  author    = {Ruisheng Su and P. Matthijs van der Sluijs and Flavius-Gabriel Marc and \textbf{Frank G. Te Nijenhuis} and Sandra A. P. Cornelissen and Bob Roozenbeek and Wim H van Zwam and Aad van der Lugt and Danny Ruijters and Josien Pluim and Theo van Walsum},
-  title     = {\href{https://pubmed.ncbi.nlm.nih.gov/40272658/}{perfDSA: Automatic Perfusion Imaging in Cerebral Digital Subtraction Angiography}},
-  journal   = {International Journal of Computer Assisted Radiology and Surgery},
-  volume    = {20},
-  pages     = {1195--1203},
-  year      = {2025}
+@inproceedings{occlunet,
+  author       = "Kore, A. A. and F. G. te Nijenhuis and Van der Sluijs, M. and Van Zwam, W. and Majoie, C. and Lycklama \`a Nijeholt, G. and Ruijters, D. and Vos, F. and Cornelissen, S. and Su, R. and van Walsum, T.",
+  title        = "OccluNet: Spatio-Temporal Deep Learning for Occlusion Detection on DSA",
+  booktitle = "Stroke Workshop on Imaging and Treatment CHallenges (SWITCH2025)",
+  maintitle = {28th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  pubstate={forthcoming},
+  year         = 2025,
+  html         = {https://arxiv.org/abs/2508.14286v1},
+  preview      = {example_occlunet.gif},
 }
 
-@article{downs2025registration,
-  author    = {Charles Downs and P Sluijs and Sandra AP Cornelissen and \textbf{Frank te Nijenhuis} and Wim H van Zwam and Vivek Gopalakrishnan and Xucong Zhang and Ruisheng Su and Theo van Walsum},
-  title     = {\href{https://pubmed.ncbi.nlm.nih.gov/40407997/}{Improving automatic cerebral 3D-2D CTA-DSA registration}},
-  journal   = {International Journal of Computer Assisted Radiology and Surgery},
-  year      = {2025}
+@inproceedings{vascular_territory,
+  author       = "P. M. van der Sluijs and L. Strong and F. G. te Nijenhuis and S. Cornelissen and P. J. van Doormaal and G. Lycklama {\`a} Nijeholt and W. van Zwam and A. van Es and D. Dippel and A. van der Lugt and D. Ruijters and R. Su and T. van Walsum",
+  title        = "Direct vascular territory segmentation on cerebral digital subtraction angiography",
+  booktitle = "Stroke Workshop on Imaging and Treatment CHallenges (SWITCH2025)",
+  maintitle = {28th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  pubstate={forthcoming},
+  year         = 2025,
+  html         = {https://arxiv.org/abs/2508.13821v1},
+  preview      = {territory.jpg},
 }
 
+@inproceedings{miccai,
+  author       = "F. G. te Nijenhuis and Su, R. and van Doormaal, P.J. and Hofmeijer, J. and Martens, J. and van Zwam, W. and van der Lugt, A. and Zhang, X. and van Walsum, T.",
+  title        = "Multimodal deep learning for functional outcome prediction in endovascular therapy",
+  booktitle = "Stroke Workshop on Imaging and Treatment CHallenges (SWITCH2023)",
+  maintitle = {26th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+  year         = 2023,
+  html         = {https://link.springer.com/chapter/10.1007/978-3-031-76160-7_14},
+  preview      = {roc_curves_combined.png},
+}
