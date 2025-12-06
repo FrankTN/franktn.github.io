@@ -23,6 +23,7 @@ group :jekyll_plugins do
 end
 group :other_plugins do
     gem 'css_parser'
+    gem 'faraday-retry'
     gem 'feedjira'
     gem 'httparty'
 end
