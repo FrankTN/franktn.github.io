@@ -194,11 +194,11 @@ let transTheme = () => {
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// "system". Default is "dark".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "system";
+    themeSetting = "dark";
   }
   return themeSetting;
 };
@@ -220,6 +220,10 @@ let determineComputedTheme = () => {
 };
 
 let initTheme = () => {
+  // Set dark theme immediately to prevent flash
+  document.documentElement.setAttribute("data-theme", "dark");
+  document.documentElement.setAttribute("data-theme-setting", "dark");
+  
   let themeSetting = determineThemeSetting();
 
   setThemeSetting(themeSetting);

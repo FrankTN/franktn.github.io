@@ -56,10 +56,25 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
+    <!-- Research Interests -->
+    {% if page.research_interests %}
+      <h2>Research Interests</h2>
+      <div class="research-interests">
+        {% assign sorted_interests = site.research_interests | sort: "importance" %}
+        <div class="container">
+          <div class="row row-cols-1">
+            {% for interest in sorted_interests %}
+              {% include research_interests_horizontal.liquid %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
