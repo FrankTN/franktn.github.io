@@ -13,6 +13,7 @@ profile:
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
+research_interests: true # includes a list of research interests
 publications: true # includes a list of all publications
 social: false # includes social icons at the bottom of the page
 ---
@@ -21,6 +22,6 @@ I work on applications of AI and computer vision methods in stroke imaging. My m
 
 Within the [ICAI Stroke Lab](https://icai-stroke-lab.webflow.io/) I collaborate closely with my colleagues working on the application of AI methods in the different stages of the (Dutch) stroke care pathway. In addition to the Stroke Lab, I am also a member of the [Biomedical Imaging Group Rotterdam](https://bigr.nl/), in the Erasmus MC. 
 
-I'm supervised by [dr. Theo van Walsum](https://www.erasmusmc.nl/en/research/researchers/walsum-theo-van), [prof. dr. Danny Ruijters](https://www.tue.nl/en/research/researchers/danny-ruijters), [dr. Ruisheng Su](https://ruishengsu.github.io/) and [dr. Sandra Cornelissen](https://www.erasmusmc.nl/nl-nl/patientenzorg/zorgverleners/cornelissen-sap). 
+I'm supervised by [dr. Theo van Walsum](https://bigr.nl/member/theovanwalsum/), [prof. dr. Danny Ruijters](https://www.tue.nl/en/research/researchers/danny-ruijters), [dr. Ruisheng Su](https://ruishengsu.github.io/) and [dr. Sandra Cornelissen](https://www.erasmusmc.nl/nl-nl/patientenzorg/zorgverleners/cornelissen-sap). 
 
 If you are a MSc student looking for a project (either an internship or a full thesis) don't hesitate to contact me.
