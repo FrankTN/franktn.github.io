@@ -1,0 +1,100 @@
+# Supervised Students
+# Format: List of students with their information
+# completion_date should be in YYYY-MM-DD format for proper sorting (most recent first)
+# link is optional - if provided, the topic will be clickable
+# internship: set to true if this is an internship supervision, false or omit for thesis supervision
+# university: name of the university/institution where the degree was completed
+
+- name: "M. A. Berrospi"
+  degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2024-06-15" # Format: YYYY-MM-DD
+  topic: "Vessel correspondence in pre-post-intervention DSA images of ischemic stroke patients"
+  link: "https://resolver.tudelft.nl/uuid:911faaf5-859a-4e5c-b875-997411c1b44e" # Optional: link to published thesis
+  internship: false
+
+- name: "M. Allaoui"
+  degree: "MSc Biomedical Technology and Physics" # BSc, MSc, PhD, etc.
+  university: "Vrije Universiteit Amsterdam" # University/institution name
+  completion_date: "2025-09-22" # Format: YYYY-MM-DD
+  topic: "Comparative Analysis of DSA and CT Perfusion in Large Vessel Occlusion Acute Ischemic Stroke"
+
+- name: "A. A. Kore"
+  degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2025-08-14" # Format: YYYY-MM-DD
+  topic: "Spatio-Temporal Deep Learning for Vascular Occlusion Detection on DSA"
+  link: "https://resolver.tudelft.nl/uuid:0b267432-2371-4665-bb7a-cda3a745ba15" 
+
+- name: "E. A. de Bruin"
+  degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2025-07-14" # Format: YYYY-MM-DD
+  topic: "A Topology-Aware Deep Learning Approach for Automated Multi-Class Segmentation of the Circle of Willis in Modeling Applications"
+  link: "https://resolver.tudelft.nl/uuid:725d84c6-3e6d-4f83-b51f-c5e7a8631165"
+
+- name: "L. L. Strong"
+  degree: "MSc Technical Medicine" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2024-09-27" # Format: YYYY-MM-DD
+  topic: "Automated quantification of brain reperfusion after acute ischemic stroke treatment"
+  link: "https://resolver.tudelft.nl/uuid:9ff947d4-fe79-4d50-bfaf-f3e32a03d9f9"
+
+- name: "D. Anyagwa, M. Bosveld, T. Seijerling, S. Wittenberg"
+  degree: "BSc Clinical Technology" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2024-06-24" # Format: YYYY-MM-DD
+  topic: "The impact of the non-reperfusion of brain atlas segments on the functional outcome in patients with acute ischemic stroke treated with endovascular therapy"
+
+- name: "C. van den Berg, M. Blaauboer, D. van Erp, C. Keppels "
+  degree: "BSc Clinical Technology" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2025-06-30" # Format: YYYY-MM-DD
+  topic: "Development of an image quality assessment tool for DSA"
+
+- name: "E. Ahmadian"
+  degree: "BSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Eindhoven University of Technology" # University/institution name
+  completion_date: "2025-11-03" # Format: YYYY-MM-DD
+  topic: "Automatic Segmentation of Non-Perfused Brain Tissue on DSA Using nnU-Net in Acute Ischemic Stroke"
+
+- name: "J. L. Prinsen"
+  degree: "BSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Eindhoven University of Technology" # University/institution name
+  completion_date: "2025-10-26" # Format: YYYY-MM-DD
+  topic: "Evaluating multi-task machine learning models on image quality control for Digital Subtraction Angiography"
+
+- name: "J. Boogaard"
+  degree: "BSc Information Technology" # BSc, MSc, PhD, etc.
+  university: "Fontys University of Applied Sciences" # University/institution name
+  completion_date: "2025-02-13" # Format: YYYY-MM-DD
+  topic: "PyCVA: Development of an open toolbox for AI-based cerebrovascular image analysis "
+
+- name: "B. Mota"
+  degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2025-12-01" # Format: YYYY-MM-DD
+  topic: "Automatic Artery-Vein separation on CT Angiography"
+  internship: true
+
+- name: "D. Garnier"
+  degree: "Extracurricular Internship" # BSc, MSc, PhD, etc.
+  university: "ENSEEIHT" # University/institution name
+  completion_date: "2025-09-01" # Format: YYYY-MM-DD
+  topic: "Synthetic augmentation to improve post-EVT prognosis in late-window ischemic stroke"
+  internship: true
+
+# Example entries:
+# - name: "John Doe"
+#   degree: "MSc"
+#   university: "University Name"
+#   completion_date: "2024-03-20"
+#   topic: "Deep Learning for Medical Imaging"
+#   link: "https://example.com/thesis" # Optional
+
+# - name: "Jane Smith"
+#   degree: "BSc"
+#   university: "University Name"
+#   completion_date: "2023-12-10"
+#   topic: "Computer Vision Applications"
+#   # No link field means topic won't be clickable

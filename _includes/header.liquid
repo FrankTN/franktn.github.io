@@ -59,6 +59,19 @@
             </a>
           </li>
 
+          <!-- Education (before CV) -->
+          {% assign education_page = site.pages | where: "permalink", "/education/" | first %}
+          {% if education_page and education_page.nav %}
+          <li class="nav-item {% if page.url contains education_page.permalink %}active{% endif %}">
+            <a class="nav-link" href="{{ education_page.url | relative_url }}">
+              {{- education_page.title }}
+              {% if page.url contains education_page.url %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
+          {% endif %}
+
           <!-- CV -->
           <li class="nav-item">
             <a class="nav-link" href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank">
@@ -69,7 +82,7 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% if p.nav and p.autogen == null and p.permalink != '/education/' %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
