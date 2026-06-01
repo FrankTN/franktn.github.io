@@ -19,6 +19,19 @@
   completion_date: "2025-09-22" # Format: YYYY-MM-DD
   topic: "Comparative Analysis of DSA and CT Perfusion in Large Vessel Occlusion Acute Ischemic Stroke"
 
+- name: "M. A. Leenders"
+  degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2026-01-21" # Format: YYYY-MM-DD
+  topic: "Arterial Change Detection in Cerebral Digital Subtraction Angiography"
+  link: "https://resolver.tudelft.nl/uuid:d3164825-9ef5-4d69-bce1-2947cda4dceb"
+  
+- name: "C. C. Cutitei"
+  degree: "MSc Computer Science" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2026-05-20" # Format: YYYY-MM-DD
+  topic: "DRR-Guided Angulation: Leveraging Pre-operative CTA to Optimize Vessel Visualization in DSA-Assisted Thrombectomy"
+
 - name: "A. A. Kore"
   degree: "MSc Biomedical Engineering" # BSc, MSc, PhD, etc.
   university: "Delft University of Technology" # University/institution name
@@ -82,6 +95,13 @@
   university: "ENSEEIHT" # University/institution name
   completion_date: "2025-09-01" # Format: YYYY-MM-DD
   topic: "Synthetic augmentation to improve post-EVT prognosis in late-window ischemic stroke"
+  internship: true
+
+- name: "L. Brands"
+  degree: "MSc Technical Medicine" # BSc, MSc, PhD, etc.
+  university: "Delft University of Technology" # University/institution name
+  completion_date: "2026-05-07" # Format: YYYY-MM-DD
+  topic: "Enhancing OccluNet for Spatio-Temporal Deep Learning Occlusion Localization on DSA"
   internship: true
 
 # Example entries:
